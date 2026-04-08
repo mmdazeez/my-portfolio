@@ -11,6 +11,7 @@ import {
   TrendingUp,
   Cpu,
   BarChart3,
+  FileText,
 } from "lucide-react";
 
 const experience = [
@@ -98,7 +99,7 @@ export default function Page() {
               </h1>
 
               <p className="mt-5 text-xl md:text-2xl text-cyan-300 font-medium">
-                Process Improvement Engineer / Automation focus
+                Process Improvement Engineer | Automation & Operational Excellence
               </p>
 
               <p className="mt-6 text-slate-300 text-lg leading-8 max-w-3xl">
@@ -115,6 +116,15 @@ export default function Page() {
                   className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-3 text-slate-950 font-semibold hover:scale-[1.02] transition shadow-lg shadow-cyan-400/20"
                 >
                   View Experience <ArrowRight size={18} />
+                </a>
+
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-6 py-3 font-medium text-cyan-300 hover:bg-cyan-400/20 transition"
+                >
+                  <FileText size={18} /> Resume
                 </a>
 
                 <a
@@ -210,10 +220,10 @@ export default function Page() {
                 </div>
 
                 <div className="grid lg:grid-cols-[1fr_300px] gap-12">
-                  <ul className="space-y-4">
+                  <ul className="space-y-4 list-none">
                     {exp.bullets.map((bullet, i) => (
                       <li key={i} className="flex gap-4 text-slate-300 leading-relaxed font-light">
-                        <span className="text-cyan-400 mt-2 text-[10px]">&bull;</span>
+                        <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-cyan-400/60 mt-2.5" />
                         {bullet}
                       </li>
                     ))}
@@ -269,8 +279,11 @@ export default function Page() {
                 <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-6">{cat.name}</h3>
                 <div className="flex flex-wrap gap-2">
                   {cat.skills.map((skill) => (
-                    <span key={skill} className="text-slate-300 text-sm font-light">
-                      {skill} <span className="text-white/10 ml-1">/</span>
+                    <span 
+                      key={skill} 
+                      className="px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300 text-xs font-medium hover:bg-cyan-400/20 transition-colors"
+                    >
+                      {skill}
                     </span>
                   ))}
                 </div>
@@ -288,7 +301,7 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="group rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:bg-white/8 transition">
               <h3 className="text-xl font-bold group-hover:text-cyan-300 transition-colors">Rivier University</h3>
-              <p className="mt-2 text-cyan-300 font-medium">Master Science &bull; Computer Information Systems</p>
+              <p className="mt-2 text-cyan-300 font-medium">Master of Science &bull; Computer Information Systems</p>
               <p className="mt-1 text-slate-500 text-sm">2023 — 2025 | Nashua, NH</p>
             </div>
 
